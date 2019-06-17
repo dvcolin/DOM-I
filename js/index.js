@@ -132,6 +132,38 @@ contactP[2].textContent = siteContent['contact']['email'];
 const footerP = document.querySelector('footer > p');
 footerP.textContent = siteContent['footer']['copyright'];
 
+//************************************************************************************************
+
+////////////////////////STRETCH////////////////////////////
+const body = document.querySelector('body');
+const ctaText = document.querySelector('.cta > .cta-text');
+
+const changeStyles = document.createElement('button');
+changeStyles.textContent = 'Change Styles!';
+changeStyles.style.height = '75px';
+changeStyles.style.borderRadius = '5px';
+
+ctaText.appendChild(changeStyles);
+
+
+changeStyles.addEventListener('click', change);
+
+function change() {
+  body.style.background = 'black';
+
+  ctaTitle.style.color = 'red';
+
+  headerImg.src = 'https://cdn-images-1.medium.com/max/2600/1*pofor4p-ig072eaChITOYQ.jpeg';
+  headerImg.style.width = 'auto';
+  headerImg.style.height = '350px';
+
+  for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].style.color = 'red';
+  }
+}
+
+
+
 
 
 
