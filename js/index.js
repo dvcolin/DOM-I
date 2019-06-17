@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+/////////////////// NAVIGATION //////////////////////////
 
 const navLinks = document.querySelectorAll('nav > a');
 
@@ -59,6 +60,7 @@ link5.textContent = siteContent['nav']['nav-item-5'];
 link6.textContent = siteContent['nav']['nav-item-6'];
 
 
+/////////////////// CTA //////////////////////////
 
 const ctaTitle = document.querySelector('.cta-text > h1');
 ctaTitle.textContent = siteContent['cta']['h1'];
@@ -69,6 +71,34 @@ headerImg.setAttribute('src', siteContent['cta']['img-src']);
 const ctaButton = document.querySelector('.cta-text > button');
 ctaButton.textContent = siteContent['cta']['button'];
 
-const textGroups = document.querySelectorAll('.text-content');
+/////////////////// TOP CONTENT //////////////////////////
 
-console.log(textGroups);
+const topContentH4 = document.querySelectorAll('.top-content > .text-content > h4');
+const topContentP = document.querySelectorAll('.top-content > .text-content > p');
+
+topContentH4[0].textContent = siteContent['main-content']['features-h4'];
+topContentP[0].textContent = siteContent['main-content']['features-content'];
+
+
+topContentH4[1].textContent = siteContent['main-content']['about-h4'];
+topContentP[1].textContent = siteContent['main-content']['about-content'];
+
+
+/////////////////// MIDDLE IMAGE //////////////////////////
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+/////////////////// BOTTOM CONTENT //////////////////////////
+
+const bottomContentH4 = document.querySelectorAll('.bottom-content > .text-content > h4');
+const bottomContentP = document.querySelectorAll('.bottom-content > .text-content > p');
+
+bottomContentH4[0].textContent = siteContent['main-content']['services-h4'];
+bottomContentP[0].textContent = siteContent['main-content']['services-content'];
+
+bottomContentH4[1].textContent = siteContent['main-content']['product-h4'];
+bottomContentP[1].textContent = siteContent['main-content']['product-content'];
+
+bottomContentH4[2].textContent = siteContent['main-content']['vision-h4'];
+bottomContentP[2].textContent = siteContent['main-content']['vision-content'];
