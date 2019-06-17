@@ -71,10 +71,12 @@ navbar.prepend(navStart);
 navbar.appendChild(navEnd);
 
 /////////////////// CHANGING NAV TEXT COLOR TO GREEN //////////////////////////
-for (let i = 0; i < navLinks.length; i++) {
-  navLinks[i].style.color = 'green';
-}
+const newNavLinks = document.querySelectorAll('nav > a');
 
+
+newNavLinks.forEach(link => {
+  link.style.color = 'green';
+});
 
 /////////////////// CTA //////////////////////////
 const ctaTitle = document.querySelector('.cta-text > h1');
@@ -157,9 +159,9 @@ function change() {
   headerImg.style.width = 'auto';
   headerImg.style.height = '350px';
 
-  for (let i = 0; i < navLinks.length; i++) {
-    navLinks[i].style.color = 'red';
-  }
+  newNavLinks.forEach(link => {
+    link.style.color = 'red';
+  });
 }
 
 
